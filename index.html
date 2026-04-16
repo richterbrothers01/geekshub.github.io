@@ -580,8 +580,8 @@
 
       let model = null;
       const loader = new THREE.GLTFLoader();
-      loader.load('model/scene.gltf', gltf => {
-        model = scene.gltf;
+      loader.load('./model/scene.gltf', gltf => {
+        model = gltf.scene;
         const box = new THREE.Box3().setFromObject(model);
         const center = box.getCenter(new THREE.Vector3());
         const size = box.getSize(new THREE.Vector3());
